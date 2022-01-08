@@ -18,6 +18,12 @@ export default function Home() {
     exlcuirPessoa
   } = usePessoas()
 
+  let pessoaR = pessoa
+  
+  if (router.query?.id) {
+    pessoaR = new Pessoa(router.query.nome + "", +router.query.idade, router.query.id + "")
+  }
+
   return (
     <Layout titulo="Pessoas Cadastro e Tabela">
       <FormularioPessoa
@@ -25,7 +31,7 @@ export default function Home() {
         botaoVoltar={false}
         salvarFuncao={salvarPessoa}
         voltarFuncao={obterPessoas} 
-        pessoa={pessoa} />
+        pessoa={pessoaR} />
 
       <Tabela
         paginaUnica={false}

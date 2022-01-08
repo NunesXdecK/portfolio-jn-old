@@ -16,8 +16,8 @@ interface FormularioPessoaProps {
 export default function FormularioPessoa(props: FormularioPessoaProps) {
     const id = props.pessoa?.id
     
-    const [nome, setNome] = useState(props.pessoa?.nome);
-    const [idade, setIdade] = useState(props.pessoa?.idade);
+    const [nome, setNome] = useState(props.pessoa?.nome ?? '');
+    const [idade, setIdade] = useState(props.pessoa?.idade ?? 0);
     
     function resetaFormulario() {
         setNome("")
@@ -27,6 +27,10 @@ export default function FormularioPessoa(props: FormularioPessoaProps) {
         }
     }
 
+    if (id) {
+        setNome(props.pessoa?.nome)
+        setIdade(props.pessoa?.idade)
+    }
     return (
         <div className="my-10">
             <div className="py-4">

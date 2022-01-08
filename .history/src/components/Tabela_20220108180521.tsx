@@ -55,11 +55,9 @@ export default function Tabela(props: TabelaProps) {
             )
         } else {
             let pathname = "/pessoacadastro"
-
             if (props.redirecionarPessoa) {
                 pathname = "/pessoaCT"
             }
-            
             botao = (
                 <Link href={{ pathname: pathname, query: { "id": pessoa.id, "nome": pessoa.nome, "idade": pessoa.idade } }}>
                     <button className={IconeTabelaButtonEdicaoStyles}>

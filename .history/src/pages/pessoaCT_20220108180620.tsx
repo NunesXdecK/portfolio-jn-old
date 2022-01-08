@@ -8,7 +8,8 @@ import usePessoas from "../hooks/usePessoas";
 export default function Home() {
   
   const router = useRouter()
-  
+  let pessoaR = Pessoa.vazio()
+
   const {
     pessoa,
     pessoas,
@@ -17,6 +18,10 @@ export default function Home() {
     selecionarPessoa,
     exlcuirPessoa
   } = usePessoas()
+  
+  if (router.query?.id) {
+    pessoaR = new Pessoa(router.query.nome + "", +router.query.idade, router.query.id + "")
+  }
 
   return (
     <Layout titulo="Pessoas Cadastro e Tabela">
@@ -24,11 +29,9 @@ export default function Home() {
         paginaUnica={true}
         botaoVoltar={false}
         salvarFuncao={salvarPessoa}
-        voltarFuncao={obterPessoas} 
-        pessoa={pessoa} />
+        voltarFuncao={obterPessoas} pessoa={pessoa} />
 
       <Tabela
-        paginaUnica={false}
         redirecionarPessoa={true}
         pessoas={pessoas}
         selecionarPessoa={selecionarPessoa}
