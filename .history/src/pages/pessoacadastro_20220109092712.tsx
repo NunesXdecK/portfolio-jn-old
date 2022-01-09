@@ -5,6 +5,7 @@ import Pessoa from "../core/Pessoa";
 import usePessoas from "../hooks/usePessoas";
 
 export default function Home() {
+
   const router = useRouter()
   let pessoaR = Pessoa.vazio()
 
@@ -14,13 +15,12 @@ export default function Home() {
     salvarPessoa,
   } = usePessoas()
 
-  if (router?.query?.id) {
+  if (router.query?.id) {
     pessoaR = new Pessoa(router.query.nome + "", +router.query.idade, router.query.id + "")
   }
 
   return (
     <Layout titulo="Pessoas Mudando Paginas">
-      
       <FormularioPessoa
         paginaUnica={false}
         salvarFuncao={salvarPessoa}

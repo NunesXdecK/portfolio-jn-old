@@ -21,7 +21,7 @@ const firebaseConfig2 = {
     experimentalForceLongPolling: true
 }
 
-const app = initializeApp(firebaseConfig2)
+const app = initializeApp(firebaseConfig2, "jn-auth")
 const db = getFirestore()
 
 export { db }

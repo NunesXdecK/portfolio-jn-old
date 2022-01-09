@@ -47,7 +47,7 @@ export default function Tabela(props: TabelaProps) {
 
     function renderizaBotaoEdicao(pessoa: Pessoa) {
         let botao
-        if (props.paginaUnica) {
+        if (props.paginaUnica || !props.redirecionarPessoa) {
             botao = (
                 <button onClick={() => props.selecionarPessoa?.(pessoa)} className={IconeTabelaButtonEdicaoStyles}>
                     {IconeEdicao}

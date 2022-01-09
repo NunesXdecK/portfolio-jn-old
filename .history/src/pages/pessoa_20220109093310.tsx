@@ -14,9 +14,9 @@ export default function Home() {
   return (
     <Layout titulo="Pessoas Mudando Paginas">
       <Botao link={true} destino="/pessoacadastro" cor="cinza">Nova pessoa</Botao>
-
+      
       <Tabela
-        paginaUnica={false}
+      paginaUnica={false}
         pessoas={pessoas}
         selecionarPessoa={selecionarPessoa}
         excluirPessoa={exlcuirPessoa} />

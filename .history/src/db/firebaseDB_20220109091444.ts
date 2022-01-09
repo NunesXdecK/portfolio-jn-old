@@ -11,17 +11,7 @@ const firebaseConfig = {
     experimentalForceLongPolling: true
 }
 
-const firebaseConfig2 = {
-    apiKey: "AIzaSyBIlj3worDz292VAzOEVRkVMMHlVpZ-u90",
-    authDomain: "portfolio-jn-1da51.firebaseapp.com",
-    projectId: "portfolio-jn-1da51",
-    storageBucket: "portfolio-jn-1da51.appspot.com",
-    messagingSenderId: "485265184973",
-    appId: "1:485265184973:web:de43cb373841299314b184",
-    experimentalForceLongPolling: true
-}
-
-const app = initializeApp(firebaseConfig2)
+const app = initializeApp(firebaseConfig)
 const db = getFirestore()
 
 export { db }

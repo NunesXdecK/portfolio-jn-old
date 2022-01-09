@@ -17,6 +17,7 @@ export default function Home() {
 
       <Tabela
         paginaUnica={false}
+        redirecionarPessoa={true}
         pessoas={pessoas}
         selecionarPessoa={selecionarPessoa}
         excluirPessoa={exlcuirPessoa} />

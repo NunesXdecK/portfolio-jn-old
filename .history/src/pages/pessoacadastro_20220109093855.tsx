@@ -20,7 +20,6 @@ export default function Home() {
 
   return (
     <Layout titulo="Pessoas Mudando Paginas">
-      
       <FormularioPessoa
         paginaUnica={false}
         salvarFuncao={salvarPessoa}
