@@ -18,6 +18,7 @@ export default class PessoaColecao {
     }
 
     async obterTodos() {
+        console.log("att aí vercel")
         const q = query(this.colecao(), orderBy("nome", "asc"))
         const promise = await getDocs(q)
         let pessoas = []
