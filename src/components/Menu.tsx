@@ -31,7 +31,7 @@ export default function Menu(props: MenuProps) {
                             <Navegador destino="/">Inicio</Navegador>
                             <Navegador destino="/pessoa">Pessoas EP</Navegador>
                             <Navegador destino="/pessoaPU">Pessoas PU</Navegador>
-                            <Navegador destino="/pessoaCT">Pessoas CT</Navegador>
+                            //<Navegador destino="/pessoaCT">Pessoas CT</Navegador>
                         </nav>
                     </div>
                 </div>
